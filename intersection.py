@@ -3,7 +3,7 @@ import pandas as pd
 from fuzzywuzzy import fuzz
 
 
-# This python code finds the match (intersection) between two list.
+# This python code finds the match (intersection) between two lists.
 
 # It supports fuzzy match, to handle misspelling or typing errors. The result includes the Levenshtein distance between the two strings under comparison (100 is perfect match)
 
