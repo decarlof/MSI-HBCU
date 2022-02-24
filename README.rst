@@ -4,9 +4,9 @@ It supports fuzzy match, to handle misspelling or typing errors. The result incl
 
 Example searching for::
 
-  ['Cambrxidge Collxdege', 'Canada College', 'Chabot College', 'Chemeketa Community College']
+    ['Cambrxidge Collxdege', 'Canada College', 'Chaboet College', 'Chemmeketa Comunity Collage']
 
 gives::
 
-  Exact Match: ['Canada College', 'Chabot College', 'Chemeketa Community College']
-  Fuzzy Match [(92, 'Cambridge College'), (100, 'Canada College'), (100, 'Chabot College'), (100, 'Chemeketa Community College')]
+    Exact Match: ['Canada College']
+    Fuzzy Match [(92, 'Cambridge College'), (100, 'Canada College'), (97, 'Chabot College'), (93, 'Chemeketa Community College')]

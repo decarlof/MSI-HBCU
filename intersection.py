@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from fuzzywuzzy import fuzz
 
-a_list = ['Cambridge College', 'Canada College', 'Chabot College', 'Chemeketa Community College']
+a_list = ['Cambrxidge Collxdege', 'Canada College', 'Chaboet College', 'Chemmeketa Comunity Collage']
 
 b_list = ['Aaniiih Nakoda College', 'Adams State University', 'Adelphi University', 'Alabama Agricultural & Mechanical University', 'Alabama State University', 'Alaska Christian College', 
                  'Alaska Pacific University', 'Albany State University', 'Albany Technical College', 'Alcorn State University', 'Allan Hancock College', 'Allen University', 'Altierus Career College', 
