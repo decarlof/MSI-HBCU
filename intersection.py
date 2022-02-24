@@ -1,6 +1,10 @@
-aps_user_list = ['Cambridge College', 'Canada College', 'Chabot College', 'Chemeketa Community College']
+import os
+import pandas as pd
+from fuzzywuzzy import fuzz
 
-msi_hbcu_list = ['Aaniiih Nakoda College', 'Adams State University', 'Adelphi University', 'Alabama Agricultural & Mechanical University', 'Alabama State University', 'Alaska Christian College', 
+a_list = ['Cambridge College', 'Canada College', 'Chabot College', 'Chemeketa Community College']
+
+b_list = ['Aaniiih Nakoda College', 'Adams State University', 'Adelphi University', 'Alabama Agricultural & Mechanical University', 'Alabama State University', 'Alaska Christian College', 
                  'Alaska Pacific University', 'Albany State University', 'Albany Technical College', 'Alcorn State University', 'Allan Hancock College', 'Allen University', 'Altierus Career College', 
                  'Altierus Career College-Arlington', 'Altierus Career College-Bissonnet', 'Altierus Career College-Columbus', 'Altierus Career College-Fort Worth South', 'Altierus Career College-Norcross', 
                  'Alverno College', 'Alvin Community College', 'Amarillo College', 'American Academy of Art', 'American Baptist Theological Seminary', 'American Musical & Dramatic Academy', 'American River College', 
@@ -105,4 +109,9 @@ def intersection(lst1, lst2):
     lst3 = [value for value in lst1 if value in lst2]
     return lst3
 
-print(intersection(aps_user_list, msi_hbcu_list))
+# Perform exact match intersection
+print(f'Exact Match: {intersection(a_list, b_list)}')
+
+# Perform fuzzy string matching
+tuples_list = [max([(fuzz.token_set_ratio(i,j),j) for j in b_list]) for i in a_list]
+print(f'Fuzzy Match {tuples_list}')
