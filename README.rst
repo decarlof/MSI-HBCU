@@ -6,9 +6,7 @@ Example searching for::
 
 ['Cambrxidge Collxdege', 'Canada College', 'Chabot College', 'Chemeketa Community College']
 
-gives:
-
-::
+gives::
 
 Exact Match: ['Canada College', 'Chabot College', 'Chemeketa Community College']
 Fuzzy Match [(92, 'Cambridge College'), (100, 'Canada College'), (100, 'Chabot College'), (100, 'Chemeketa Community College')]
