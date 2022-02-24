@@ -1,6 +1,6 @@
 This python code finds the match (intersection) between two list.
 
-It supports fuzzy match, to handle misspelling or typing errors. The result include a probability match score (0-100 with 100 equal to perfect match)
+It supports fuzzy match, to handle misspelling or typing errors. The result includes the Levenshtein distance between the two strings under comparison (100 is perfect match)
 
 Example searching for::
 
